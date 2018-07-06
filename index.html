@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/hexagon.css">
+    <title>MemGen</title>
+</head>
+
+<body onload="init()">
+    <header>
+        <nav>
+            <button class="menu-btn" onclick="onToggleMenu()"> ☰ </button>
+            <ul class="clean-list flex nav-bar">
+                <a href="#" class="no-decor" onclick="init();resetView();">
+                    <li>Memes</li>
+                </a>
+                <div class="arrow-down"></div>
+                <a href="#" class="no-decor" onclick="openModal();">
+                    <li>About</li>
+                </a>
+                <a href="#getInTouch" class="no-decor">
+                    <li>Get in touch</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="modal flex" onclick="openModal();">
+        <section id="about" class="flex">
+            <img src="https://scontent.fsdv3-1.fna.fbcdn.net/v/t1.0-9/32089343_10204649601957567_5142902906629914624_n.jpg?_nc_cat=0&oh=44495ed2b244ae32fa9abb60e3eb5df1&oe=5BEA8E3F"
+                alt="author pic" />
+            <div class="flex-col" style="margin-left:5%">
+                <h2>This is my first meme generator</h2>
+                <p>I hope you enjoy the meme generator and even share it with your friends! :)</p>
+            </div>
+        </section>
+    </div>
+
+    <div>
+        <input class="top-search-filter" type="text" onkeyup="liveFilter(this.value);renderImgs();" placeholder="Filter by tag" />
+    </div>
+
+    <main class="container">
+
+    </main>
+
+    <div class="search-filter flex justify-center align-center">
+    </div>
+    <div class="border"><p></p></div>
+
+    <footer class="container">
+        <div id="getInTouch" class="get-in-touch">
+            <h2>Get in touch</h2>
+            <p>
+                In order to get in touch use the contact form below:
+            </p>
+            <div class="flex info-hold ">
+                <form class="flex-col ">
+                    <input type="text " class="sender-name " placeholder="Name (required) " required/>
+                    <input type="email " class="sender-mail " placeholder="Email (required) " required/>
+                    <input type="text " class="sender-subject " placeholder="Subject " required/>
+                    <textarea rows="8 " cols="70 " class="sender-text " placeholder="Write your message here... "></textarea>
+                    <button type="submit " onclick="onSendContact(); ">Send</button>
+                    </a>
+                </form>
+
+                <div class="get-in-touch-info flex-col">
+                    <p>
+                        <b>Some text:</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia deleniti quae est fuga
+                        optio quam, nostrum ducimus at, minima labore eveniet perferendis beatae, porro impedit natus!</p>
+                    <br/>
+                    <ul class="clean-list">
+                        <li>St adress</li>
+                        <li>Telehpone#</li>
+                        <li>Mail adrrs</li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="border"><p></p></div>
+
+
+
+
+
+
+
+    <script src="js/canvas.js "></script>
+    <script src="js/meme-service.js "></script>
+    <script src="js/main.js "></script>
+
+</body>
+
+</html>
+
+
+
+
+<!-- <div class="modal ">
+    <div class="modal-content-header ">
+            <div class="modal-content ">
+    
+    
+            </div>
+        </div>
+    </div>
+     -->
